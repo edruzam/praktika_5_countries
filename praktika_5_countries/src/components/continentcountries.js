@@ -42,8 +42,8 @@ export default class ContinentCountries extends Component {
                     <h1>Continent: {continent_name}</h1>
                     <ul className="list-group">
                         {countries.map(c => (
-                            <li className="list-group-item" key={c.code}>
-                                {c.country}
+                            <li className="list-group-item" key={c.country}>
+                                <a className="list-group-item list-group-item-action" href={`/countrybyname/${c.country}`}>{c.country}</a>
                             </li>
                         ))}
                     </ul>

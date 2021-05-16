@@ -3,6 +3,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import ContinentCountries from './components/continentcountries'
+import Country from './components/country'
 
 export default class App extends Component {
   constructor(props) {
@@ -47,9 +48,10 @@ export default class App extends Component {
           </header>
           <div className="container">
             <div className="row">
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <Switch>
                   <Route path="/continent/:name" component={ContinentCountries} />
+                  <Route path="/countrybyname/:country" component={Country} />
                 </Switch>
               </div>
             </div>
